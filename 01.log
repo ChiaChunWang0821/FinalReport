@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7000 64-bit) (preloaded format=xelatex 2019.5.11)  18 OCT 2019 14:06
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7000 64-bit) (preloaded format=xelatex 2019.5.11)  18 OCT 2019 14:18
 entering extended mode
 **./01.tex
 (01.tex
@@ -749,7 +749,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write3
 \openout3 = `01.toc'.
 
-[2] [1]
+[2] [3] [1]
 Underfull \hbox (badness 10000) in paragraph at lines 77--83
 
  []
@@ -854,9 +854,6 @@ Overfull \hbox (11.47705pt too wide) in paragraph at lines 283--288
 [][]  [] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: pic/ch3/轉換前之訊號.JPG Graphic file (type bmp)
 <pic/ch3/轉換前之訊號.JPG>
 File: pic/ch3/轉換後之訊號.JPG Graphic file (type bmp)
@@ -866,9 +863,6 @@ Overfull \hbox (11.47705pt too wide) in paragraph at lines 295--300
 [][]  [] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: pic/ch3/code-快速傅立葉.JPG Graphic file (type bmp)
 <pic/ch3/code-快速傅立葉.JPG>
 
@@ -876,10 +870,7 @@ Overfull \hbox (9.67381pt too wide) in paragraph at lines 306--307
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[11]
+[11] [12]
 File: pic/ch3/code-速度分級.JPG Graphic file (type bmp)
 <pic/ch3/code-速度分級.JPG>
 
@@ -887,25 +878,22 @@ Overfull \hbox (9.67381pt too wide) in paragraph at lines 314--315
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[12]
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 322--323
 
  []
 
-[13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 355--357
+[14] [15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 357--359
 
  []
 
-[15]
-Overfull \hbox (4.78363pt too wide) in paragraph at lines 360--383
+[17]
+Overfull \hbox (4.78363pt too wide) in paragraph at lines 362--385
 [][] 
  []
 
-[16] [17] (01.aux)
+[18] [19] (01.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -919,4 +907,4 @@ Here is how much of TeX's memory you used:
  1328 hyphenation exceptions out of 8191
  40i,9n,62p,433b,446s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on 01.pdf (20 pages).
+Output written on 01.pdf (23 pages).
