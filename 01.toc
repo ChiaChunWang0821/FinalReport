@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {1}介紹}{1}% 
+\contentsline {subsection}{\numberline {1.1}動機與目的}{1}% 
+\contentsline {subsection}{\numberline {1.2}系統介紹}{1}% 
+\contentsline {subsubsection}{\numberline {1.2.1}網路連線版本}{1}% 
+\contentsline {subsubsection}{\numberline {1.2.2}單機模式版本}{2}% 
+\contentsline {section}{\numberline {2}軟體與硬體架構}{3}% 
+\contentsline {subsection}{\numberline {2.1}軟硬體架構圖}{3}% 
+\contentsline {subsection}{\numberline {2.2}硬體架構}{4}% 
+\contentsline {subsubsection}{\numberline {2.2.1}系統外觀介紹}{4}% 
+\contentsline {subsubsection}{\numberline {2.2.2}感測技術}{5}% 
+\contentsline {subsection}{\numberline {2.3}軟體架構}{7}% 
+\contentsline {subsubsection}{\numberline {2.3.1}網路連線功能}{7}% 
+\contentsline {subsubsection}{\numberline {2.3.2}藍芽功能}{10}% 
+\contentsline {subsubsection}{\numberline {2.3.3}Arduino端功能}{11}% 
+\contentsline {section}{\numberline {3}肌肉感測訊號分析}{12}% 
+\contentsline {section}{\numberline {4}實驗結果}{15}% 
+\contentsline {subsection}{\numberline {4.1}實驗環境}{15}% 
+\contentsline {section}{\numberline {5}結論}{16}% 
+\contentsline {section}{\numberline {6}工作分配}{17}% 
+\contentsline {section}{Reference}{18}% 
