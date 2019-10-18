@@ -80,51 +80,57 @@
 \indent 訂一個力量標準，超過記為有效，每0.15秒計為一次，直到集滿指定的量或超過限制時間後結束遊戲。\\
 2. 速度模式 \\
 \indent 將訊號過濾後以快速傅立葉轉換計算一個時間間格內發生的頻率，只要速度不是0就記為有效，直到集滿指定的量或超過限制時間後結束遊戲。\\
+
+\subsection{報告組織}
+本實驗報告第二章介紹系統之軟硬體架構：硬體包括系統外觀介紹及所使用之感測器與技術，軟體架構包括系統流程圖及系統中各功能的用途、流程與實作方法。第三章將著重介紹軟體演算法之過程，包括肌肉感測器之數據分析及影像變化之處理。第四章為實驗結果，包括系統實測之數據效能分析及整體系統遊戲之體驗。第五章為此專題之結論。\\
 \newpage
 
 \section{軟體與硬體架構}
 此章節介紹，軟體系統及硬體系統之架構與技術。
 
 \subsection{軟硬體架構圖}
-下圖所示，系統架構分為兩大項：左半部為軟體，包含Android手持裝置之網路連線系統與OpenCV模組；右半部則為硬體，包含Arduino與肌肉感測器。軟硬體通訊，則由藍芽負責連接。
+下圖 \ref{軟硬體架構圖} 所示，系統架構分為兩大項：左半部為軟體，包含Android手持裝置之網路連線系統與OpenCV模組；右半部則為硬體，包含Arduino與肌肉感測器。軟硬體通訊，則由藍芽負責連接。
 \begin{figure}[h]  % Put pictures here.
 \centering
 \includegraphics[width=10cm]{pic/ch2/軟硬體架構圖.JPG}
-\caption{軟硬體架構圖}
+\caption{軟硬體架構圖} \label{軟硬體架構圖}
 \end{figure}
-\newpage
 
 \subsection{硬體架構}
 
 \subsubsection{系統外觀介紹}
 本系統外觀分別為Android手持裝置、肌肉感測器、藍芽裝置、電源四項，介紹如下：
 \begin{enumerate}
-\item Android手持裝置：本專題使用到手機上的相機、藍芽功能。
-\item 肌肉感測器：
+\item Android手持裝置（圖 \ref{Android}）：本專題使用到手機上的相機、藍芽功能。
+\item 肌肉感測器（圖 \ref{MuscleSensor}）：
 \begin{itemize}
 \item 供電電壓：+3.1V\textasciitilde +5V
 \item RAW EMG 輸出：MyoWare 能擁有二次輸出 RAW EMG 波形的機會。
 \item LED 指示燈：增加兩個版載LED燈，當MyoWare的電源鍵是開的，肌肉用力時LED燈即會發亮。
 \end{itemize}
-\item 藍芽裝置：藍芽模組可以與手持裝置的藍芽互相傳送接收訊息。
-\item 電源：使用電流穩定既可重複使用的行動電源作為供電來源。
+\item 藍芽裝置（圖 \ref{Bluetooth}）：藍芽模組可以與手持裝置的藍芽互相傳送接收訊息。
+\item 電源（圖 \ref{MobilePower}）：使用電流穩定既可重複使用的行動電源作為供電來源。
 \end{enumerate}
 
 \begin{figure}[h]  % Put pictures here.
 \subfigure[Android手持裝置]{
 \includegraphics[width=3cm]{pic/ch2/Android.jpg}
+\label{Android}
 }
 \quad
 \subfigure[肌肉感測器]{
 \includegraphics[width=3cm]{pic/ch2/MuscleSensor.jpg}
+\label{MuscleSensor}
 }
 \quad
 \subfigure[藍芽裝置]{
 \includegraphics[width=3cm]{pic/ch2/Bluetooth.jpg}
+\label{Bluetooth}
 }
 \quad
 \subfigure[電源]{
 \includegraphics[width=3cm]{pic/ch2/MobilePower.jpg}
+\label{MobilePower}
 }
 \caption{系統外觀介紹}
 \end{figure}
@@ -134,7 +140,6 @@
 \includegraphics[width=5cm]{pic/ch2/HardwareSystem.jpg}
 \caption{硬體系統整合}
 \end{figure}
-\newpage
 
 \subsubsection{感測技術}
 製作本系統所需主要技術如下：
@@ -143,11 +148,11 @@
 \begin{itemize}
 \item 通過 MyoWare 可以測量肌肉的電訊號活動，在過去實驗一般稱之為肌電儀器（EMG）。當大腦下指令告訴你的肌肉收縮，將發送一個傳遞路徑提醒肌肉開始徵招肌肉運動單元（肌束纖維使肌肉產生力量）。當肌肉越用力，產生越多的肌肉運動單元來招募更大的肌肉力量。當招募越多的肌肉單元數目，將會產生更多的肌肉電位改變。MyoWare 將分析此電訊號並輸出訊號來表示肌肉如何用力。當你越用力 MyoWare 將輸出更大的電壓。雖然 EMG 已能偵測肌肉放電的訊號，但 MyoWare 則使它更具意義更為人性化。
 \item 我們以 0.15 秒讀取一次的頻率取得訊號，以 1.2 秒為一個間距分析其中的變化。之後在第三章會對感測器訊號分析的演算法有更詳細地介紹。
-\item 圖為感測器流程圖
+\item 圖 \ref{感測器流程圖} 為感測器流程圖
 \begin{figure}[h]  % Put pictures here.
 \centering
 \includegraphics[width=4cm]{pic/ch2/感測器流程圖.JPG}
-\caption{感測器流程圖}
+\caption{感測器流程圖} \label{感測器流程圖}
 \end{figure}
 \end{itemize}
 
@@ -161,11 +166,11 @@
 \item [Step3.] 回到應用程式主畫面，點選藍芽連線。
 \item [Step4.] 顯示連線成功。
 \end{description}
-\item 圖為藍芽開啟流程圖
+\item 圖 \ref{藍芽開啟流程圖} 為藍芽開啟流程圖
 \begin{figure}[h]  % Put pictures here.
 \centering
 \includegraphics[width=3cm]{pic/ch2/藍芽開啟流程圖.JPG}
-\caption{藍芽開啟流程圖}
+\caption{藍芽開啟流程圖} \label{藍芽開啟流程圖}
 \end{figure}
 \end{itemize}
 
@@ -182,34 +187,8 @@
 \begin{itemize}
 \item 基於TCP網路架構，建構出Server端及Player（Client）端，使影像與數據以此通道傳輸。
 
-\item 圖為Server端建立且等候連線之程式碼片段
-\begin{figure}[h]  % Put pictures here.
-\subfigure[建立]{
-\includegraphics[width=15cm]{pic/ch2/code-Server.JPG}
-}
-\quad
-\subfigure[傳送]{
-\includegraphics[width=15cm]{pic/ch2/code-Server2.JPG}
-}
-\caption{Server端之程式碼片段}
-\end{figure}
-\newpage
-
-\item 圖為Player（Client）端建立連線及傳送之程式碼片段
-\begin{figure}[h]  % Put pictures here.
-\subfigure[建立連線]{
-\includegraphics[width=15cm]{pic/ch2/code-Client.JPG}
-}
-\quad
-\subfigure[傳送]{
-\includegraphics[width=15cm]{pic/ch2/code-Client2.JPG}
-}
-\caption{Client端之程式碼片段}
-\end{figure}
-\newpage
-
-\item 圖為網路協定圖
-\begin{figure}[h]  % Put pictures here.
+\item 圖 \ref{網路協定圖} 為網路協定圖
+\begin{figure}[htbp]
 \subfigure[Player連線協定圖]{
 \includegraphics[width=7cm]{pic/ch2/tcp01.JPG}
 }
@@ -221,59 +200,83 @@
 \subfigure[Player傳送、接收影像協定圖]{
 \includegraphics[width=7cm]{pic/ch2/tcp03.JPG}
 }
-\caption{網路協定圖}
+\caption{網路協定圖} \label{網路協定圖}
+\end{figure}
+\newpage
+
+\item 圖 \ref{Server端之程式碼片段} 為Server端建立且等候連線之程式碼片段
+\begin{figure}[htbp]
+\subfigure[建立]{
+\includegraphics[width=15cm]{pic/ch2/code-Server.JPG}
+}
+\quad
+\subfigure[傳送]{
+\includegraphics[width=15cm]{pic/ch2/code-Server2.JPG}
+}
+\caption{Server端之程式碼片段} \label{Server端之程式碼片段}
+\end{figure}
+\newpage
+
+\item 圖 \ref{Client端之程式碼片段} 為Player（Client）端建立連線及傳送之程式碼片段
+\begin{figure}[htbp]
+\subfigure[建立連線]{
+\includegraphics[width=15cm]{pic/ch2/code-Client.JPG}
+}
+\quad
+\subfigure[傳送]{
+\includegraphics[width=15cm]{pic/ch2/code-Client2.JPG}
+}
+\caption{Client端之程式碼片段} \label{Client端之程式碼片段}
 \end{figure}
 \end{itemize}
-\newpage
 
 \subsubsection{藍芽功能}
 \begin{itemize}
 \item 用途為建立與肌肉感測器之間的通訊。
-\item 圖為將藍芽連線至裝置之程式碼片段。
-\begin{figure}[h]  % Put pictures here.
+\item 圖 \ref{藍芽連線之程式碼片段} 為將藍芽連線至裝置之程式碼片段。
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=15cm]{pic/ch2/code-BluetoothActivity.JPG}
-\caption{藍芽連線之程式碼片段}
+\caption{藍芽連線之程式碼片段} \label{藍芽連線之程式碼片段}
 \end{figure}
 
-\item 圖為藍芽接收訊號，以 byte 形式儲存，並且將收到的數字存在session 以便之後的計算。
-\begin{figure}[h]  % Put pictures here.
+\item 圖 \ref{藍芽接收之程式碼片段} 為藍芽接收訊號，以 byte 形式儲存，並且將收到的數字存在session 以便之後的計算。
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=15cm]{pic/ch2/code-BluetoothActivity2.JPG}
-\caption{藍芽接收之程式碼片段}
+\caption{藍芽接收之程式碼片段} \label{藍芽接收之程式碼片段}
 \end{figure}
 \end{itemize}
-\newpage
 
 \subsubsection{Arduino端功能}
 \begin{itemize}
 \item 將肌肉感測器輸出線路插在指定腳位，之後將貼片貼在手臂的指定位置上。
-\item 圖為將感測器訊號由 Arduino 端傳至 Android 手機端之程式碼片段。
-\begin{figure}[h]  % Put pictures here.
+\item 圖 \ref{Arduino之程式碼片段} 為將感測器訊號由 Arduino 端傳至 Android 手機端之程式碼片段。
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=10cm]{pic/ch2/code-Arduino.JPG}
-\caption{Arduino之程式碼片段}
+\caption{Arduino之程式碼片段} \label{Arduino之程式碼片段}
 \end{figure}
 %\item 圖為在手機端能清楚讀入感測器傳入的數值。
 \end{itemize}
 \newpage
 
-\section{肌肉感測訊號分析}
-本章節著重介紹肌肉感測訊號分析技術。將描述這些功能包含目的、演算法流程與程式碼片段說明。
+\section{肌肉感測訊號分析與影像處理}
+本章節著重介紹肌肉感測訊號分析與影像處理技術。描述這些功能包含目的、演算法流程與程式碼片段說明。
 
-%\subsection{肌肉感測器訊號分析}
+\subsection{肌肉感測器訊號分析}
 \begin{itemize}
 \item 目的：用於分析由 Arduino 傳至手持裝置的肌肉感測器訊號。過濾不可用的訊號後，利用快速傅立葉轉換得知訊號的大小與頻率。
 \item 演算法流程
 \begin{itemize}
-\item 如圖所示，陣列一為隨時更新最新資訊的短陣列（紅色），陣列二為隨時更新最新訊號的長陣列（綠色）。下面會說明兩個陣列分別執行的不同計算工作。
-\begin{figure}[h]  % Put pictures here.
+\item 如圖 \ref{陣列與訊號關係示意圖} 所示，陣列一為隨時更新最新資訊的短陣列（紅色），陣列二為隨時更新最新訊號的長陣列（綠色）。下面會說明兩個陣列分別執行的不同計算工作。
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=15cm]{pic/ch3/陣列與訊號關係示意圖.JPG}
-\caption{陣列與訊號關係示意圖}
+\caption{陣列與訊號關係示意圖} \label{陣列與訊號關係示意圖}
 \end{figure}
 
-\item 如圖所示，在大的陣列裝滿後，以小的陣列用於判斷訊號是否在變化，有的話就以大的陣列判斷變換的節奏。
+\item 如圖 \ref{部分程式碼片段} 所示，在大的陣列裝滿後，以小的陣列用於判斷訊號是否在變化，有的話就以大的陣列判斷變換的節奏。
 \begin{figure}[h]  % Put pictures here.
 \subfigure[設兩個分別為大跟小的陣列]{
 \includegraphics[width=7cm]{pic/ch3/設兩個分別為大跟小的陣列.JPG}
@@ -282,10 +285,10 @@
 \subfigure[開始執行]{
 \includegraphics[width=7cm]{pic/ch3/開始執行.JPG}
 }
-\caption{部分程式碼片段}
+\caption{部分程式碼片段} \label{部分程式碼片段}
 \end{figure}
 
-\item 如圖所示，轉換後的結果較轉換前容易判斷頻率，在遊戲的演算法中可以較容易的定義肌肉放鬆節奏的快慢。
+\item 如圖 \ref{訊號頻率} 所示，轉換後的結果較轉換前容易判斷頻率，在遊戲的演算法中可以較容易的定義肌肉放鬆節奏的快慢。
 \begin{figure}[h]  % Put pictures here.
 \subfigure[轉換前之訊號]{
 \includegraphics[width=7cm]{pic/ch3/轉換前之訊號.JPG}
@@ -294,28 +297,29 @@
 \subfigure[轉換後之訊號]{
 \includegraphics[width=7cm]{pic/ch3/轉換後之訊號.JPG}
 }
-\caption{部分程式碼片段}
+\caption{訊號頻率} \label{訊號頻率}
 \end{figure}
 
-\item 如圖所示，傅立葉轉換主要的功能是用於信號在時域（或空域）和頻域之間的變換。我們用轉換後的結果來判斷訊使用者行為有沒有在動，然後再用另一個更長的來判斷使用者行為，這樣做的目的是減少延遲的時間。
+\item 如圖 \ref{快速傅立葉之程式碼片段} 所示，傅立葉轉換主要的功能是用於信號在時域（或空域）和頻域之間的變換。我們用轉換後的結果來判斷訊使用者行為有沒有在動，然後再用另一個更長的來判斷使用者行為，這樣做的目的是減少延遲的時間。
 \begin{figure}[h]  % Put pictures here.
 \centering
 \includegraphics[width=15cm]{pic/ch3/code-快速傅立葉.JPG}
-\caption{快速傅立葉之程式碼片段}
+\caption{快速傅立葉之程式碼片段} \label{快速傅立葉之程式碼片段}
 \end{figure}
 \newpage
 
-\item 如圖所示，將速度分為三個階段，越快的會加分的越快。
+\item 如圖 \ref{速度分級之程式碼片段} 所示，將速度分為三個階段，越快的會加分的越快。
 \begin{figure}[h]  % Put pictures here.
 \centering
 \includegraphics[width=15cm]{pic/ch3/code-速度分級.JPG}
-\caption{速度分級之程式碼片段}
+\caption{速度分級之程式碼片段} \label{速度分級之程式碼片段}
 \end{figure}
 \end{itemize}
 \end{itemize}
+\newpage
 
-%\subsubsection{場景分析}
-%場景分析
+\subsection{影像處理}
+影像處理影像處理影像處理\\
 \newpage
 
 \section{實驗結果}
