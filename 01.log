@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7000 64-bit) (preloaded format=xelatex 2019.5.11)  13 DEC 2019 11:44
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7000 64-bit) (preloaded format=xelatex 2019.5.11)  13 DEC 2019 12:49
 entering extended mode
 **./01.tex
 (01.tex
@@ -799,24 +799,7 @@ File: pic/ch2/code-Server2.JPG Graphic file (type bmp)
 <pic/ch2/code-Server2.JPG>
 File: pic/ch2/code-Server3.JPG Graphic file (type bmp)
 <pic/ch2/code-Server3.JPG>
-
-Overfull \hbox (17.49782pt too wide) in paragraph at lines 211--220
-[][]
- []
-
-
-Overfull \hbox (17.49782pt too wide) in paragraph at lines 211--220
-[]
- []
-
-
-Overfull \hbox (17.49782pt too wide) in paragraph at lines 211--220
-[] 
- []
-
-
-LaTeX Warning: Float too large for page by 0.77994pt on input line 221.
-
+ [8]
 File: pic/ch2/code-Client.JPG Graphic file (type bmp)
 <pic/ch2/code-Client.JPG>
 File: pic/ch2/code-Client2.JPG Graphic file (type bmp)
@@ -825,42 +808,28 @@ File: pic/ch2/code-Client3.JPG Graphic file (type bmp)
 <pic/ch2/code-Client3.JPG>
 File: pic/ch2/code-Client4.JPG Graphic file (type bmp)
 <pic/ch2/code-Client4.JPG>
-
-Overfull \hbox (17.49782pt too wide) in paragraph at lines 227--237
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 227--237
-[]
- []
-
-
-Overfull \hbox (17.49782pt too wide) in paragraph at lines 227--237
-[] 
- []
-
+ [9] [10]
 File: pic/ch2/code-BluetoothActivity.JPG Graphic file (type bmp)
 <pic/ch2/code-BluetoothActivity.JPG>
 
-Overfull \hbox (9.67381pt too wide) in paragraph at lines 247--248
+Overfull \hbox (9.67381pt too wide) in paragraph at lines 261--262
  [][] 
  []
 
 File: pic/ch2/code-BluetoothActivity2.JPG Graphic file (type bmp)
 <pic/ch2/code-BluetoothActivity2.JPG>
 
-Overfull \hbox (9.67381pt too wide) in paragraph at lines 254--255
+Overfull \hbox (9.67381pt too wide) in paragraph at lines 268--269
  [][] 
  []
 
 File: pic/ch2/code-Arduino.JPG Graphic file (type bmp)
 <pic/ch2/code-Arduino.JPG>
-[8] [9] [10] [11]
+[11]
 File: pic/ch3/陣列與訊號關係示意圖.JPG Graphic file (type bmp)
 <pic/ch3/陣列與訊號關係示意圖.JPG>
 
-Overfull \hbox (9.67381pt too wide) in paragraph at lines 283--284
+Overfull \hbox (9.67381pt too wide) in paragraph at lines 297--298
  [][] 
  []
 
@@ -869,7 +838,7 @@ File: pic/ch3/設兩個分別為大跟小的陣列.JPG Graphic file (type bmp)
 File: pic/ch3/開始執行.JPG Graphic file (type bmp)
 <pic/ch3/開始執行.JPG>
 
-Overfull \hbox (11.47705pt too wide) in paragraph at lines 291--296
+Overfull \hbox (11.47705pt too wide) in paragraph at lines 305--310
 [][]  [] 
  []
 
@@ -878,22 +847,23 @@ File: pic/ch3/轉換前之訊號.JPG Graphic file (type bmp)
 File: pic/ch3/轉換後之訊號.JPG Graphic file (type bmp)
 <pic/ch3/轉換後之訊號.JPG>
 
-Overfull \hbox (11.47705pt too wide) in paragraph at lines 303--308
+Overfull \hbox (11.47705pt too wide) in paragraph at lines 317--322
 [][]  [] 
  []
 
+[12]
 File: pic/ch3/code-快速傅立葉.JPG Graphic file (type bmp)
 <pic/ch3/code-快速傅立葉.JPG>
 
-Overfull \hbox (9.67381pt too wide) in paragraph at lines 314--315
+Overfull \hbox (9.67381pt too wide) in paragraph at lines 328--329
  [][] 
  []
 
-[12] [13]
+[13]
 File: pic/ch3/code-速度分級.JPG Graphic file (type bmp)
 <pic/ch3/code-速度分級.JPG>
 
-Overfull \hbox (9.67381pt too wide) in paragraph at lines 322--323
+Overfull \hbox (9.67381pt too wide) in paragraph at lines 336--337
  [][] 
  []
 
@@ -911,12 +881,12 @@ File: pic/ch3/feature_contours.JPG Graphic file (type bmp)
 File: pic/ch3/face_contours.JPG Graphic file (type bmp)
 <pic/ch3/face_contours.JPG>
  [15] [16] [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 428--430
+Underfull \hbox (badness 10000) in paragraph at lines 442--444
 
  []
 
 [19]
-Overfull \hbox (4.78363pt too wide) in paragraph at lines 433--456
+Overfull \hbox (4.78363pt too wide) in paragraph at lines 447--470
 [][] 
  []
 
@@ -924,12 +894,15 @@ Overfull \hbox (4.78363pt too wide) in paragraph at lines 433--456
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 16908 strings out of 427748
- 365219 string characters out of 3147200
- 454941 words of memory out of 3000000
- 20781 multiletter control sequences out of 15000+200000
+ 16912 strings out of 427748
+ 365231 string characters out of 3147200
+ 454978 words of memory out of 3000000
+ 20785 multiletter control sequences out of 15000+200000
  537175 words of font info for 66 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  40i,9n,62p,433b,464s stack positions out of 5000i,500n,10000p,200000b,50000s

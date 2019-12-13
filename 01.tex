@@ -186,7 +186,7 @@
 \subsubsection{網路連線功能}
 \begin{itemize}
 \item 基於TCP網路架構，建構出Server端及Player（Client）端，使影像與數據以此通道傳輸。
-
+\item 使用不同 Thread 分別執行 inputstream 與outputstream，於網路通道上進行輸入及輸出，且以 lock、unlock、await、signal 處理同步問題。
 \item 圖 \ref{網路協定圖} 為網路協定圖
 \begin{figure}[htbp]
 \subfigure[Player連線協定圖]{
@@ -204,38 +204,52 @@
 \end{figure}
 \newpage
 
-\item 圖 \ref{Server端之程式碼片段} 為Server端建立且等候連線之程式碼片段
+\item 以下為Server端之程式碼片段
+\begin{itemize}
+\item 圖 \ref{S建立連線} 為建立連線
 \begin{figure}[htbp]
-\subfigure[建立]{
-\includegraphics[width=15cm]{pic/ch2/code-Server.JPG}
-}
-\quad
-\subfigure[傳送]{
-\includegraphics[width=15cm]{pic/ch2/code-Server2.JPG}
-}
-\quad
-\subfigure[接收]{
-\includegraphics[width=15cm]{pic/ch2/code-Server3.JPG}
-}
-\caption{Server端之程式碼片段} \label{Server端之程式碼片段}
+\centering
+\includegraphics[width=10cm]{pic/ch2/code-Server.JPG}
+\caption{建立連線} \label{S建立連線}
 \end{figure}
+\item 圖 \ref{S接收數據} 為接收數據
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=10cm]{pic/ch2/code-Server2.JPG}
+\caption{接收數據} \label{S接收數據}
+\end{figure}
+\item 圖 \ref{S傳送數據} 為傳送數據
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=10cm]{pic/ch2/code-Server3.JPG}
+\caption{傳送數據} \label{S傳送數據}
+\end{figure}
+\end{itemize}
+\newpage
 
-\item 圖 \ref{Client端之程式碼片段} 為Player（Client）端建立連線及傳送之程式碼片段
+\item 以下為Client端之程式碼片段
+\begin{itemize}
+\item 圖 \ref{C建立連線} 為建立連線
 \begin{figure}[htbp]
-\subfigure[建立連線]{
-\includegraphics[width=15cm]{pic/ch2/code-Client.JPG}
-}
-\quad
-\subfigure[傳送]{
-\includegraphics[width=7cm]{pic/ch2/code-Client2.JPG}
-\includegraphics[width=7cm]{pic/ch2/code-Client3.JPG}
-}
-\quad
-\subfigure[接收]{
-\includegraphics[width=15cm]{pic/ch2/code-Client4.JPG}
-}
-\caption{Client端之程式碼片段} \label{Client端之程式碼片段}
+\centering
+\includegraphics[width=10cm]{pic/ch2/code-Client.JPG}
+\caption{建立連線} \label{C建立連線}
 \end{figure}
+\item 圖 \ref{C傳送數據} 為傳送數據
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=10cm]{pic/ch2/code-Client2.JPG} \\ 
+\includegraphics[width=10cm]{pic/ch2/code-Client3.JPG}
+\caption{傳送數據} \label{C傳送數據}
+\end{figure}
+\item 圖 \ref{C接收數據} 為接收數據
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=10cm]{pic/ch2/code-Client4.JPG}
+\caption{接收數據} \label{C接收數據}
+\end{figure}
+\end{itemize}
+\newpage
 \end{itemize}
 
 \subsubsection{藍芽功能}

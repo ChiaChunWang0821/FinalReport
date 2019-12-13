@@ -11,8 +11,8 @@
 \contentsline {subsubsection}{\numberline {2.2.2}感測技術}{4}% 
 \contentsline {subsection}{\numberline {2.3}軟體架構}{6}% 
 \contentsline {subsubsection}{\numberline {2.3.1}網路連線功能}{7}% 
-\contentsline {subsubsection}{\numberline {2.3.2}藍芽功能}{8}% 
-\contentsline {subsubsection}{\numberline {2.3.3}Arduino端功能}{8}% 
+\contentsline {subsubsection}{\numberline {2.3.2}藍芽功能}{11}% 
+\contentsline {subsubsection}{\numberline {2.3.3}Arduino端功能}{11}% 
 \contentsline {section}{\numberline {3}肌肉感測訊號分析與影像處理}{12}% 
 \contentsline {subsection}{\numberline {3.1}肌肉感測器訊號分析}{12}% 
 \contentsline {subsection}{\numberline {3.2}影像處理}{15}% 
