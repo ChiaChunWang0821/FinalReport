@@ -6,27 +6,23 @@
 \contentsline {subsection}{\numberline {1.3}報告組織}{2}% 
 \contentsline {section}{\numberline {2}軟體與硬體架構}{3}% 
 \contentsline {subsection}{\numberline {2.1}軟硬體架構圖}{3}% 
-\contentsline {subsection}{\numberline {2.2}硬體架構}{3}% 
-\contentsline {subsubsection}{\numberline {2.2.1}系統外觀介紹}{3}% 
-\contentsline {subsubsection}{\numberline {2.2.2}感測技術}{4}% 
-\contentsline {subsection}{\numberline {2.3}軟體架構}{6}% 
+\contentsline {subsection}{\numberline {2.2}硬體架構}{4}% 
+\contentsline {subsubsection}{\numberline {2.2.1}系統外觀介紹}{4}% 
+\contentsline {subsubsection}{\numberline {2.2.2}感測技術}{5}% 
+\contentsline {subsection}{\numberline {2.3}軟體架構}{7}% 
 \contentsline {subsubsection}{\numberline {2.3.1}網路連線功能}{7}% 
-\contentsline {subsubsection}{\numberline {2.3.2}藍芽功能}{11}% 
-\contentsline {subsubsection}{\numberline {2.3.3}Arduino端功能}{11}% 
-\contentsline {section}{\numberline {3}肌肉感測訊號分析與人臉五官偵測}{12}% 
-\contentsline {subsection}{\numberline {3.1}肌肉感測器訊號分析}{12}% 
-\contentsline {subsection}{\numberline {3.2}人臉五官偵測}{15}% 
-\contentsline {subsubsection}{\numberline {3.2.1}使用工具}{15}% 
-\contentsline {subsubsection}{\numberline {3.2.2}特徵點提取及臉部偵測技術}{15}% 
-\contentsline {subsubsection}{\numberline {3.2.3}ML Kit 運行步驟}{18}% 
-\contentsline {subsubsection}{\numberline {3.2.4}面部更改}{20}% 
-\contentsline {section}{\numberline {4}實驗結果}{21}% 
-\contentsline {subsection}{\numberline {4.1}實驗環境}{21}% 
-\contentsline {subsection}{\numberline {4.2}網路傳送速度之時間量測}{21}% 
-\contentsline {subsection}{\numberline {4.3}人臉五官偵測精確度之量測}{21}% 
-\contentsline {subsection}{\numberline {4.4}肌肉感測器之速度量測}{21}% 
-\contentsline {subsection}{\numberline {4.5}專題結果展示}{21}% 
-\contentsline {subsection}{\numberline {4.6}遊戲者體驗}{22}% 
-\contentsline {section}{\numberline {5}結論}{23}% 
-\contentsline {section}{\numberline {6}工作分配}{24}% 
-\contentsline {section}{Reference}{25}% 
+\contentsline {subsubsection}{\numberline {2.3.2}藍芽功能}{12}% 
+\contentsline {subsubsection}{\numberline {2.3.3}Arduino端功能}{12}% 
+\contentsline {section}{\numberline {3}肌肉感測訊號分析與人臉五官偵測}{13}% 
+\contentsline {subsection}{\numberline {3.1}肌肉感測器訊號分析}{13}% 
+\contentsline {subsection}{\numberline {3.2}人臉五官偵測}{16}% 
+\contentsline {subsubsection}{\numberline {3.2.1}使用工具}{16}% 
+\contentsline {subsubsection}{\numberline {3.2.2}特徵點提取及臉部偵測技術}{16}% 
+\contentsline {subsubsection}{\numberline {3.2.3}ML Kit 運行步驟}{19}% 
+\contentsline {subsubsection}{\numberline {3.2.4}面部更改}{21}% 
+\contentsline {section}{\numberline {4}實驗結果}{22}% 
+\contentsline {subsection}{\numberline {4.1}實驗環境}{22}% 
+\contentsline {subsection}{\numberline {4.2}專題結果展示}{22}% 
+\contentsline {section}{\numberline {5}結論}{24}% 
+\contentsline {section}{\numberline {6}工作分配}{25}% 
+\contentsline {section}{Reference}{26}% 

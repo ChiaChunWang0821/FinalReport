@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7000 64-bit) (preloaded format=xelatex 2019.5.11)  13 DEC 2019 22:11
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7000 64-bit) (preloaded format=xelatex 2019.5.11)  14 DEC 2019 00:01
 entering extended mode
 **./01.tex
 (01.tex
@@ -745,12 +745,11 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 
 ("C:\Users\User\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-[2])
+))
 \tf@toc=\write3
 \openout3 = `01.toc'.
 
- [3] [1]
+[2] [3] [1]
 Underfull \hbox (badness 10000) in paragraph at lines 77--83
 
  []
@@ -763,6 +762,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--86
 [2]
 File: pic/ch2/軟硬體架構圖.JPG Graphic file (type bmp)
 <pic/ch2/軟硬體架構圖.JPG>
+File: pic/ch2/system.jpg Graphic file (type bmp)
+<pic/ch2/system.jpg>
  [3]
 File: pic/ch2/Android.jpg Graphic file (type bmp)
 <pic/ch2/Android.jpg>
@@ -788,18 +789,18 @@ File: pic/ch2/tcp02.JPG Graphic file (type bmp)
 File: pic/ch2/tcp03.JPG Graphic file (type bmp)
 <pic/ch2/tcp03.JPG>
 
-Overfull \hbox (11.47705pt too wide) in paragraph at lines 194--203
+Overfull \hbox (11.47705pt too wide) in paragraph at lines 200--209
 [][]  []
  []
 
-[7]
+[7] [8]
 File: pic/ch2/code-Server.JPG Graphic file (type bmp)
 <pic/ch2/code-Server.JPG>
 File: pic/ch2/code-Server2.JPG Graphic file (type bmp)
 <pic/ch2/code-Server2.JPG>
 File: pic/ch2/code-Server3.JPG Graphic file (type bmp)
 <pic/ch2/code-Server3.JPG>
- [8]
+ [9]
 File: pic/ch2/code-Client.JPG Graphic file (type bmp)
 <pic/ch2/code-Client.JPG>
 File: pic/ch2/code-Client2.JPG Graphic file (type bmp)
@@ -808,28 +809,28 @@ File: pic/ch2/code-Client3.JPG Graphic file (type bmp)
 <pic/ch2/code-Client3.JPG>
 File: pic/ch2/code-Client4.JPG Graphic file (type bmp)
 <pic/ch2/code-Client4.JPG>
- [9] [10]
+ [10] [11]
 File: pic/ch2/code-BluetoothActivity.JPG Graphic file (type bmp)
 <pic/ch2/code-BluetoothActivity.JPG>
 
-Overfull \hbox (9.67381pt too wide) in paragraph at lines 261--262
+Overfull \hbox (9.67381pt too wide) in paragraph at lines 267--268
  [][] 
  []
 
 File: pic/ch2/code-BluetoothActivity2.JPG Graphic file (type bmp)
 <pic/ch2/code-BluetoothActivity2.JPG>
 
-Overfull \hbox (9.67381pt too wide) in paragraph at lines 268--269
+Overfull \hbox (9.67381pt too wide) in paragraph at lines 274--275
  [][] 
  []
 
 File: pic/ch2/code-Arduino.JPG Graphic file (type bmp)
 <pic/ch2/code-Arduino.JPG>
-[11]
+[12]
 File: pic/ch3/陣列與訊號關係示意圖.JPG Graphic file (type bmp)
 <pic/ch3/陣列與訊號關係示意圖.JPG>
 
-Overfull \hbox (9.67381pt too wide) in paragraph at lines 297--298
+Overfull \hbox (9.67381pt too wide) in paragraph at lines 303--304
  [][] 
  []
 
@@ -838,7 +839,7 @@ File: pic/ch3/設兩個分別為大跟小的陣列.JPG Graphic file (type bmp)
 File: pic/ch3/開始執行.JPG Graphic file (type bmp)
 <pic/ch3/開始執行.JPG>
 
-Overfull \hbox (11.47705pt too wide) in paragraph at lines 305--310
+Overfull \hbox (11.47705pt too wide) in paragraph at lines 311--316
 [][]  [] 
  []
 
@@ -847,27 +848,27 @@ File: pic/ch3/轉換前之訊號.JPG Graphic file (type bmp)
 File: pic/ch3/轉換後之訊號.JPG Graphic file (type bmp)
 <pic/ch3/轉換後之訊號.JPG>
 
-Overfull \hbox (11.47705pt too wide) in paragraph at lines 317--322
+Overfull \hbox (11.47705pt too wide) in paragraph at lines 323--328
 [][]  [] 
  []
 
-[12]
+[13]
 File: pic/ch3/code-快速傅立葉.JPG Graphic file (type bmp)
 <pic/ch3/code-快速傅立葉.JPG>
 
-Overfull \hbox (9.67381pt too wide) in paragraph at lines 328--329
- [][] 
- []
-
-[13]
-File: pic/ch3/code-速度分級.JPG Graphic file (type bmp)
-<pic/ch3/code-速度分級.JPG>
-
-Overfull \hbox (9.67381pt too wide) in paragraph at lines 336--337
+Overfull \hbox (9.67381pt too wide) in paragraph at lines 334--335
  [][] 
  []
 
 [14]
+File: pic/ch3/code-速度分級.JPG Graphic file (type bmp)
+<pic/ch3/code-速度分級.JPG>
+
+Overfull \hbox (9.67381pt too wide) in paragraph at lines 342--343
+ [][] 
+ []
+
+[15]
 File: pic/ch3/coord.png Graphic file (type bmp)
 <pic/ch3/coord.png>
 File: pic/ch3/poseangles.png Graphic file (type bmp)
@@ -875,7 +876,7 @@ File: pic/ch3/poseangles.png Graphic file (type bmp)
 File: pic/ch3/Landmarks.JPG Graphic file (type bmp)
 <pic/ch3/Landmarks.JPG>
 
-Overfull \hbox (9.67381pt too wide) in paragraph at lines 383--384
+Overfull \hbox (9.67381pt too wide) in paragraph at lines 389--390
  [][] 
  []
 
@@ -886,24 +887,24 @@ File: pic/ch3/feature_contours.JPG Graphic file (type bmp)
 File: pic/ch3/face_contours.JPG Graphic file (type bmp)
 <pic/ch3/face_contours.JPG>
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--401
+Underfull \hbox (badness 10000) in paragraph at lines 399--407
 [][]
  []
 
-[15] [16]
+[16] [17]
 File: pic/ch3/landmarks_train.jpg Graphic file (type bmp)
 <pic/ch3/landmarks_train.jpg>
- [17]
+ [18]
 File: pic/ch3/DetectorOptions.JPG Graphic file (type bmp)
 <pic/ch3/DetectorOptions.JPG>
 File: pic/ch3/VisionImage.JPG Graphic file (type bmp)
 <pic/ch3/VisionImage.JPG>
 
-Overfull \hbox (9.67381pt too wide) in paragraph at lines 442--443
+Overfull \hbox (9.67381pt too wide) in paragraph at lines 448--449
  [][] 
  []
 
-[18]
+[19]
 File: pic/ch3/detector.JPG Graphic file (type bmp)
 <pic/ch3/detector.JPG>
 File: pic/ch3/FaceResult.JPG Graphic file (type bmp)
@@ -911,14 +912,14 @@ File: pic/ch3/FaceResult.JPG Graphic file (type bmp)
 File: pic/ch3/Landmark.jpg Graphic file (type bmp)
 <pic/ch3/Landmark.jpg>
 
-Overfull \hbox (9.67381pt too wide) in paragraph at lines 470--471
+Overfull \hbox (9.67381pt too wide) in paragraph at lines 476--477
  [][] 
  []
 
-[19]
+[20]
 File: pic/ch3/imgcon.jpg Graphic file (type bmp)
 <pic/ch3/imgcon.jpg>
- [20]
+ [21]
 File: pic/ch4/game01.png Graphic file (type bmp)
 <pic/ch4/game01.png>
 File: pic/ch4/game02.png Graphic file (type bmp)
@@ -926,11 +927,10 @@ File: pic/ch4/game02.png Graphic file (type bmp)
 File: pic/ch4/game05.png Graphic file (type bmp)
 <pic/ch4/game05.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 508--514
+Underfull \hbox (badness 10000) in paragraph at lines 514--520
 
  []
 
-[21]
 File: pic/ch4/game03.png Graphic file (type bmp)
 <pic/ch4/game03.png>
 File: pic/ch4/game04.png Graphic file (type bmp)
@@ -938,27 +938,27 @@ File: pic/ch4/game04.png Graphic file (type bmp)
 File: pic/ch4/game06.png Graphic file (type bmp)
 <pic/ch4/game06.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 515--521
+Underfull \hbox (badness 10000) in paragraph at lines 521--527
 
  []
 
-[22] [23]
-Overfull \hbox (16.78363pt too wide) in paragraph at lines 537--560
+[22] [23] [24]
+Overfull \hbox (16.78363pt too wide) in paragraph at lines 543--566
 [][] 
  []
 
-[24] [25] (01.aux)
+[25] [26] (01.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 16971 strings out of 427748
- 366443 string characters out of 3147200
- 455038 words of memory out of 3000000
- 20830 multiletter control sequences out of 15000+200000
+ 16976 strings out of 427748
+ 366528 string characters out of 3147200
+ 455049 words of memory out of 3000000
+ 20834 multiletter control sequences out of 15000+200000
  537175 words of font info for 66 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  40i,9n,62p,433b,464s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on 01.pdf (29 pages).
+Output written on 01.pdf (30 pages).
