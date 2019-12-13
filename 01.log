@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7000 64-bit) (preloaded format=xelatex 2019.5.11)  13 DEC 2019 11:29
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7000 64-bit) (preloaded format=xelatex 2019.5.11)  13 DEC 2019 11:44
 entering extended mode
 **./01.tex
 (01.tex
@@ -797,52 +797,70 @@ File: pic/ch2/code-Server.JPG Graphic file (type bmp)
 <pic/ch2/code-Server.JPG>
 File: pic/ch2/code-Server2.JPG Graphic file (type bmp)
 <pic/ch2/code-Server2.JPG>
+File: pic/ch2/code-Server3.JPG Graphic file (type bmp)
+<pic/ch2/code-Server3.JPG>
 
-Overfull \hbox (17.49782pt too wide) in paragraph at lines 211--216
+Overfull \hbox (17.49782pt too wide) in paragraph at lines 211--220
 [][]
  []
 
 
-Overfull \hbox (17.49782pt too wide) in paragraph at lines 211--216
+Overfull \hbox (17.49782pt too wide) in paragraph at lines 211--220
+[]
+ []
+
+
+Overfull \hbox (17.49782pt too wide) in paragraph at lines 211--220
 [] 
  []
 
-[8]
+
+LaTeX Warning: Float too large for page by 0.77994pt on input line 221.
+
 File: pic/ch2/code-Client.JPG Graphic file (type bmp)
 <pic/ch2/code-Client.JPG>
 File: pic/ch2/code-Client2.JPG Graphic file (type bmp)
 <pic/ch2/code-Client2.JPG>
+File: pic/ch2/code-Client3.JPG Graphic file (type bmp)
+<pic/ch2/code-Client3.JPG>
+File: pic/ch2/code-Client4.JPG Graphic file (type bmp)
+<pic/ch2/code-Client4.JPG>
 
-Overfull \hbox (17.49782pt too wide) in paragraph at lines 224--229
+Overfull \hbox (17.49782pt too wide) in paragraph at lines 227--237
 [][]
  []
 
 
-Overfull \hbox (17.49782pt too wide) in paragraph at lines 224--229
+Underfull \hbox (badness 10000) in paragraph at lines 227--237
+[]
+ []
+
+
+Overfull \hbox (17.49782pt too wide) in paragraph at lines 227--237
 [] 
  []
 
 File: pic/ch2/code-BluetoothActivity.JPG Graphic file (type bmp)
 <pic/ch2/code-BluetoothActivity.JPG>
 
-Overfull \hbox (9.67381pt too wide) in paragraph at lines 239--240
+Overfull \hbox (9.67381pt too wide) in paragraph at lines 247--248
  [][] 
  []
 
 File: pic/ch2/code-BluetoothActivity2.JPG Graphic file (type bmp)
 <pic/ch2/code-BluetoothActivity2.JPG>
 
-Overfull \hbox (9.67381pt too wide) in paragraph at lines 246--247
+Overfull \hbox (9.67381pt too wide) in paragraph at lines 254--255
  [][] 
  []
 
 File: pic/ch2/code-Arduino.JPG Graphic file (type bmp)
 <pic/ch2/code-Arduino.JPG>
-[9] [10]
+[8] [9] [10] [11]
 File: pic/ch3/陣列與訊號關係示意圖.JPG Graphic file (type bmp)
 <pic/ch3/陣列與訊號關係示意圖.JPG>
 
-Overfull \hbox (9.67381pt too wide) in paragraph at lines 275--276
+Overfull \hbox (9.67381pt too wide) in paragraph at lines 283--284
  [][] 
  []
 
@@ -851,7 +869,7 @@ File: pic/ch3/設兩個分別為大跟小的陣列.JPG Graphic file (type bmp)
 File: pic/ch3/開始執行.JPG Graphic file (type bmp)
 <pic/ch3/開始執行.JPG>
 
-Overfull \hbox (11.47705pt too wide) in paragraph at lines 283--288
+Overfull \hbox (11.47705pt too wide) in paragraph at lines 291--296
 [][]  [] 
  []
 
@@ -860,26 +878,26 @@ File: pic/ch3/轉換前之訊號.JPG Graphic file (type bmp)
 File: pic/ch3/轉換後之訊號.JPG Graphic file (type bmp)
 <pic/ch3/轉換後之訊號.JPG>
 
-Overfull \hbox (11.47705pt too wide) in paragraph at lines 295--300
+Overfull \hbox (11.47705pt too wide) in paragraph at lines 303--308
 [][]  [] 
  []
 
 File: pic/ch3/code-快速傅立葉.JPG Graphic file (type bmp)
 <pic/ch3/code-快速傅立葉.JPG>
 
-Overfull \hbox (9.67381pt too wide) in paragraph at lines 306--307
- [][] 
- []
-
-[11] [12]
-File: pic/ch3/code-速度分級.JPG Graphic file (type bmp)
-<pic/ch3/code-速度分級.JPG>
-
 Overfull \hbox (9.67381pt too wide) in paragraph at lines 314--315
  [][] 
  []
 
-[13]
+[12] [13]
+File: pic/ch3/code-速度分級.JPG Graphic file (type bmp)
+<pic/ch3/code-速度分級.JPG>
+
+Overfull \hbox (9.67381pt too wide) in paragraph at lines 322--323
+ [][] 
+ []
+
+[14]
 File: pic/ch3/coord.png Graphic file (type bmp)
 <pic/ch3/coord.png>
 File: pic/ch3/poseangles.png Graphic file (type bmp)
@@ -892,28 +910,28 @@ File: pic/ch3/feature_contours.JPG Graphic file (type bmp)
 <pic/ch3/feature_contours.JPG>
 File: pic/ch3/face_contours.JPG Graphic file (type bmp)
 <pic/ch3/face_contours.JPG>
- [14] [15] [16] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 420--422
+ [15] [16] [17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 428--430
 
  []
 
-[18]
-Overfull \hbox (4.78363pt too wide) in paragraph at lines 425--448
+[19]
+Overfull \hbox (4.78363pt too wide) in paragraph at lines 433--456
 [][] 
  []
 
-[19] [20] (01.aux)
+[20] [21] (01.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 16896 strings out of 427748
- 364916 string characters out of 3147200
- 454940 words of memory out of 3000000
- 20772 multiletter control sequences out of 15000+200000
+ 16908 strings out of 427748
+ 365219 string characters out of 3147200
+ 454941 words of memory out of 3000000
+ 20781 multiletter control sequences out of 15000+200000
  537175 words of font info for 66 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  40i,9n,62p,433b,464s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on 01.pdf (24 pages).
+Output written on 01.pdf (25 pages).
