@@ -25,9 +25,8 @@
 \contentsline {subsection}{\numberline {4.2}網路傳送延遲時間之計算評估}{19}% 
 \contentsline {subsection}{\numberline {4.3}影像處理精確度及延遲之評估}{19}% 
 \contentsline {subsection}{\numberline {4.4}肌肉感測器延遲評估}{19}% 
-\contentsline {subsection}{\numberline {4.5}招式辨識率準確度評估}{19}% 
-\contentsline {subsection}{\numberline {4.6}專題結果展示}{19}% 
-\contentsline {subsection}{\numberline {4.7}遊戲者體驗}{20}% 
+\contentsline {subsection}{\numberline {4.5}專題結果展示}{19}% 
+\contentsline {subsection}{\numberline {4.6}遊戲者體驗}{20}% 
 \contentsline {section}{\numberline {5}結論}{21}% 
 \contentsline {section}{\numberline {6}工作分配}{22}% 
 \contentsline {section}{Reference}{23}% 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7000 64-bit) (preloaded format=xelatex 2019.5.11)  13 DEC 2019 13:42
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7000 64-bit) (preloaded format=xelatex 2019.5.11)  13 DEC 2019 14:41
 entering extended mode
 **./01.tex
 (01.tex
@@ -890,13 +890,40 @@ File: pic/ch3/detector.JPG Graphic file (type bmp)
 <pic/ch3/detector.JPG>
 File: pic/ch3/FaceResult.JPG Graphic file (type bmp)
 <pic/ch3/FaceResult.JPG>
- [18] [19] [20]
-Underfull \hbox (badness 10000) in paragraph at lines 494--496
+ [18]
+File: pic/ch4/game01.png Graphic file (type bmp)
+<pic/ch4/game01.png>
+File: pic/ch4/game02.png Graphic file (type bmp)
+<pic/ch4/game02.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 485--489
+
+ []
+
+[19]
+File: pic/ch4/game03.png Graphic file (type bmp)
+<pic/ch4/game03.png>
+File: pic/ch4/game04.png Graphic file (type bmp)
+<pic/ch4/game04.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--493
+
+ []
+
+File: pic/ch4/game05.png Graphic file (type bmp)
+<pic/ch4/game05.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--495
+
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 502--504
 
  []
 
 [21]
-Overfull \hbox (4.78363pt too wide) in paragraph at lines 499--522
+Overfull \hbox (4.78363pt too wide) in paragraph at lines 507--530
 [][] 
  []
 
@@ -906,10 +933,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 16932 strings out of 427748
- 365671 string characters out of 3147200
+ 16953 strings out of 427748
+ 366064 string characters out of 3147200
  455018 words of memory out of 3000000
- 20801 multiletter control sequences out of 15000+200000
+ 20816 multiletter control sequences out of 15000+200000
  537175 words of font info for 66 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  40i,9n,62p,433b,464s stack positions out of 5000i,500n,10000p,200000b,50000s
