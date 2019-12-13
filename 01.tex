@@ -402,10 +402,62 @@
 \includegraphics[width=5cm]{pic/ch3/face_contours.JPG}
 \caption{所偵測之結果} \label{所偵測之結果}
 \end{figure}
-
 \end{description}
 \end{itemize}
 \newpage
+
+\subsubsection{ML Kit 運行步驟}
+\begin{itemize}
+\item 前置步驟及基本需求
+\begin{description}
+\item[1] 將所需之firebase檔案新增近專案中
+\item[2] 為了使面部偵測更加準確，在圖像中至少需要100x100像素以偵測到臉部區域，如要更精確地獲得輪廓資訊則需要200x200像素。
+\end{description}
+
+\item 運行步驟
+\begin{description}
+\item[1] 建立檢測器FirebaseVisionFaceDetectorOptions
+\begin{itemize}
+\item 在將人臉檢測應用於圖像之前，可更改人臉檢測器的默認設置。例如是否識別Landmarks亦或是在模式中對於速度及準確度兩者的優先。
+\item 以圖 \ref{DetectorOptions} 解釋，在此檢測器中因為即時影像傳送，故以速度作為優先選擇。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=10cm]{pic/ch3/DetectorOptions.JPG}
+\caption{程式碼截圖} \label{DetectorOptions}
+\end{figure}
+\end{itemize}
+
+\item[2] 將資料轉成檢測器所需之圖像物件FirebaseVisionImage
+\begin{itemize}
+\item FirebaseVisionImage extends Object
+\item 能將不同的資料型態轉變為可用於偵測器的物件，但不同的資料性態在轉換時會擁有不同的需求，例如ByteBuffery在轉換時需要先將物件轉換成FirebaseVisionImageMetadata物件來進行描述。(圖 \ref{VisionImage})
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=10cm]{pic/ch3/VisionImage.JPG}
+\caption{程式碼截圖} \label{VisionImage}
+\end{figure}
+\end{itemize}
+
+\item[3] 執行檢測器FirebaseVisionFaceDetector(圖 \ref{detector})
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=10cm]{pic/ch3/detector.JPG}
+\caption{程式碼截圖} \label{detector}
+\end{figure}
+
+\item[4] 取得偵測完之物件FirebaseVisionFace(圖 \ref{FaceResult})
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=10cm]{pic/ch3/FaceResult.JPG}
+\caption{程式碼截圖} \label{FaceResult}
+\end{figure}
+在FirebaseVisionFace便存取了在臉部改動所需要的臉部輪廓座標以及面部特徵輪廓座標資料。
+\end{description}
+\end{itemize}
+
+\subsubsection{面部更改}
+\newpage
+
 
 \section{實驗結果}
 本章節將實際展示此專題成果，並依序分析各項功能在實驗環境下的結果，包含：網路傳送延遲時間之計算評估、影像處理精確度及延遲之評估、肌肉感測器延遲評估、招式辨識率準確度評估。此外，講述實作的過程，以及在實作途中所遭遇到的問題與解決方式，並附上遊戲者體驗之評價。
