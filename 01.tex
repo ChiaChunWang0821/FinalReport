@@ -283,8 +283,8 @@
 \end{itemize}
 \newpage
 
-\section{肌肉感測訊號分析與影像處理}
-本章節著重介紹肌肉感測訊號分析與影像處理技術。描述這些功能包含目的、演算法流程與程式碼片段說明。
+\section{肌肉感測訊號分析與人臉五官偵測}
+本章節著重介紹肌肉感測訊號分析與人臉五官偵測技術。描述這些功能包含目的、演算法流程與程式碼片段說明。
 
 \subsection{肌肉感測器訊號分析}
 \begin{itemize}
@@ -340,7 +340,7 @@
 \end{itemize}
 \newpage
 
-\subsection{影像處理}
+\subsection{人臉五官偵測}
 \subsubsection{使用工具}
 \begin{itemize}
 \item 使用Google Firebase ML Kit。ML Kit為Google 在2018年新開發出專為行動裝置所設計的SDK。主要將Google Cloud Vision API、Mobile Vision、Tensorflow Lite三部分組合而成。本次專題中主要使用到ML Kit 提供的影像相關之Vision API 的Face Detection部分。
@@ -370,7 +370,7 @@
 }
 \caption{Pose angle estimation} \label{Pose angle estimation}
 \end{figure}
-\item API中所檢測到的為Euler Y 以及 Euler Z。預設回傳Euler Z，如果需取得Euler Y則需將檢測器之設定做修改。
+\item API中所檢測到的為Euler Y 以及 Euler Z。預設回傳Euler Z，如果需取得Euler Y則需將偵測器之設定做修改。
 \end{itemize}
 
 \item[2] Landmarks
@@ -422,10 +422,10 @@
 
 \item 運行步驟
 \begin{description}
-\item[1] 建立檢測器FirebaseVisionFaceDetectorOptions
+\item[1] 建立偵測器FirebaseVisionFaceDetectorOptions
 \begin{itemize}
-\item 在將人臉檢測應用於圖像之前，可更改人臉檢測器的默認設置。例如是否識別Landmarks亦或是在模式中對於速度及準確度兩者的優先。
-\item 以圖 \ref{DetectorOptions} 解釋，在此檢測器中因為即時影像傳送，故以速度作為優先選擇。
+\item 在將人臉檢測應用於圖像之前，可更改人臉偵測器的默認設置。例如是否識別Landmarks亦或是在模式中對於速度及準確度兩者的優先。
+\item 以圖 \ref{DetectorOptions} 解釋，在此偵測器中因為即時影像傳送，故以速度作為優先選擇。
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=13cm]{pic/ch3/DetectorOptions.JPG}
@@ -433,7 +433,7 @@
 \end{figure}
 \end{itemize}
 
-\item[2] 將資料轉成檢測器所需之圖像物件FirebaseVisionImage
+\item[2] 將資料轉成偵測器所需之圖像物件FirebaseVisionImage
 \begin{itemize}
 \item FirebaseVisionImage extends Object
 \item 能將不同的資料型態轉變為可用於偵測器的物件，但不同的資料性態在轉換時會擁有不同的需求，例如ByteBuffery在轉換時需要先將物件轉換成FirebaseVisionImageMetadata物件來進行描述。(圖 \ref{VisionImage})
@@ -444,7 +444,7 @@
 \end{figure}
 \end{itemize}
 
-\item[3] 執行檢測器FirebaseVisionFaceDetector(圖 \ref{detector})
+\item[3] 執行偵測器FirebaseVisionFaceDetector(圖 \ref{detector})
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=13cm]{pic/ch3/detector.JPG}
@@ -483,7 +483,7 @@
 
 
 \section{實驗結果}
-本章節將實際展示此專題成果，並依序分析各項功能在實驗環境下的結果，包含：網路傳送延遲時間之計算評估、影像處理精確度及延遲之評估、肌肉感測器延遲評估。此外，講述實作的過程，以及在實作途中所遭遇到的問題與解決方式，並附上遊戲者體驗之評價。
+本章節將實際展示此專題成果，並依序分析各項功能在實驗環境下的結果，包含：網路傳送速度之時間量測、人臉五官偵測精確度之量測、肌肉感測器之速度量測。此外，講述實作的過程，以及在實作途中所遭遇到的問題與解決方式，並附上遊戲者體驗之評價。
 
 \subsection{實驗環境}
 本系統的硬體設備與軟體開發環境
@@ -494,14 +494,14 @@
 \item Android 程式開發環境：Android Studio 2.3
 \end{itemize}
 
-\subsection{網路傳送延遲時間之計算評估}
-網路傳送延遲時間之計算評估
+\subsection{網路傳送速度之時間量測}
+網路傳送速度之時間量測
 
-\subsection{影像處理精確度及延遲之評估}
-影像處理精確度及延遲之評估
+\subsection{人臉五官偵測精確度之量測}
+人臉五官偵測精確度之量測
 
-\subsection{肌肉感測器延遲評估}
-肌肉感測器延遲評估
+\subsection{肌肉感測器之速度量測}
+肌肉感測器之速度量測
 
 \subsection{專題結果展示}
 \begin{itemize}
@@ -526,8 +526,11 @@
 \newpage
 
 \section{結論}
-在本專題中，我們所開發的遊戲優勢在於這是一個非常創新的玩法，且能在遊戲中兼具運動效果及聯絡情誼之意義。此外，本系統包含了多項技術，包括：使用快速傅立葉轉換分析肌肉感測器的訊號，利用OpenCV技術進行影像處理，透過TCP架構之網路連線即時傳送。\\
-\indent 本系統所使用肌肉感測器可以貼在任何明顯肌群部位，可以更符合遊戲體驗者需求，比如從手臂更換到小腿，即可有更多不同玩法。未來，希望能增設遊戲招式之難度，且持續優化影像處理後之畫面，以及網路傳輸影像、數據之效率，提升整體遊戲品質。\\
+在本專題中，我們所開發的遊戲優勢在於創新的玩法，且能在遊戲中兼具運動效果及聯絡情誼之意義。此外，本系統包含了多項技術：\\
+\indent 基於TCP架構之網路連線即時傳輸：在MainThread建立socket連線Server端，建構出另外兩個thread，分別透過outputstream輸出及Inputstream輸入Boolean及Int、ByteArray或Double型態之數據；而為避免讀取或傳送非完整數據影像之同步問題，使用了lock、unlock指令來存取共享變數，且透過await、signal控制相對應變數之等待或釋放。\\
+\indent 利用ML Kit其中之API進行臉部影像分析；曾經想嘗試以線上資源之模式來達到更好更優化的訓練，但若要以快速取得影像特徵點的方式進行運算，將資料來回上傳著實是浪費著寶貴時間。也因該API確實已擁有優秀的訓練成效，在不連結網路的情況之下也能展現其優秀的成果。最終選擇將線上資源之計畫移除。\\
+\indent 肌肉感測器的訊號則透過快速傅立葉轉換解讀，能夠分析出肌肉施力大小及頻率。理想狀態下，即可使用這些數據來達到攻擊效果，但在實際遊戲時，偶爾會有雜訊而產生誤差，故藉著去除極大值來減小誤差所帶來的誤判。\\
+\indent 未來若要接續開發此遊戲，目前以多人連線伺服器後能夠進行兩兩隨機配對之遊戲體驗，以及邀請他人進行對戰之模式為目標。也會提供更多的逗趣圖像，或許能進行玩家預先設定懲罰之圖示將貼合至何處。最後的期待是希望能夠加上招式等功能，進行更真實且豐富的遊戲攻擊體驗。
 \newpage
 
 \section{工作分配}
@@ -535,23 +538,23 @@
 \hline
 \cellcolor[HTML]{B2BEB5}姓名 & \cellcolor[HTML]{B2BEB5}內容 & \cellcolor[HTML]{B2BEB5}說明\\
 \hline\hline
-\multirow{5}{*}{王佳君} & 網路連線 & 建構TCP網路架構，建立伺服器端及客戶端連線 \\
+\multirow{5}{*}{王佳君} & 網路連線 & 建構Server端及Client端之程式撰寫 \\
 \cline{2-3}
-\multirow{5}{*}{} & 肌肉感測器 & 讀取Arduino數據，分析波形、判斷數據 \\
+\multirow{5}{*}{} & 肌肉感測器 & 讀取、分析、判斷Arduino數據之程式研讀 \\
 \cline{2-3}
-\multirow{5}{*}{} & 系統整合 & 整合成完整系統 \\
+\multirow{5}{*}{} & 系統整合 & 整合完整系統 \\
 \cline{2-3}
-\multirow{5}{*}{} & 實驗測試 & 網路傳送與肌肉感測器延遲時間之評估\\
+\multirow{5}{*}{} & 實驗測試 & 網路傳送、肌肉感測器速度之時間量測 \\
 \cline{2-3}
 \multirow{5}{*}{} & 報告文件 & 使用Latex撰寫專題報告及海報 \\
 \hline
-\multirow{4}{*}{林令婕} & 影像處理 & 利用OpenCV技術，變更影像色調及拼貼圖案等 \\
+\multirow{4}{*}{林令婕} & 人臉五官偵測 & 利用ML Kit其中之API進行臉部影像分析等之程式撰寫 \\
 \cline{2-3}
-\multirow{4}{*}{} & 系統整合 & 整合成完整系統 \\
+\multirow{4}{*}{} & 系統整合 & 整合完整系統 \\
 \cline{2-3}
-\multirow{4}{*}{} & 實驗測試 & 影像處理精確度及延遲之評估 \\
+\multirow{4}{*}{} & 實驗測試 & 人臉五官偵測精確度之量測 \\
 \cline{2-3}
-\multirow{4}{*}{} & 報告文件 & 撰寫專題報告、海報內容 \\
+\multirow{4}{*}{} & 報告文件 & 撰寫負責技術之專題報告及海報 \\
 \hline
 \end{tabular}
 \newpage
