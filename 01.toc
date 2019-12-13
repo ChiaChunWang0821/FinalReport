@@ -16,14 +16,16 @@
 \contentsline {section}{\numberline {3}肌肉感測訊號分析與影像處理}{11}% 
 \contentsline {subsection}{\numberline {3.1}肌肉感測器訊號分析}{11}% 
 \contentsline {subsection}{\numberline {3.2}影像處理}{14}% 
-\contentsline {section}{\numberline {4}實驗結果}{15}% 
-\contentsline {subsection}{\numberline {4.1}實驗環境}{15}% 
-\contentsline {subsection}{\numberline {4.2}網路傳送延遲時間之計算評估}{15}% 
-\contentsline {subsection}{\numberline {4.3}影像處理精確度及延遲之評估}{15}% 
-\contentsline {subsection}{\numberline {4.4}肌肉感測器延遲評估}{15}% 
-\contentsline {subsection}{\numberline {4.5}招式辨識率準確度評估}{15}% 
-\contentsline {subsection}{\numberline {4.6}專題結果展示}{15}% 
-\contentsline {subsection}{\numberline {4.7}遊戲者體驗}{16}% 
-\contentsline {section}{\numberline {5}結論}{17}% 
-\contentsline {section}{\numberline {6}工作分配}{18}% 
-\contentsline {section}{Reference}{19}% 
+\contentsline {subsubsection}{\numberline {3.2.1}使用工具}{14}% 
+\contentsline {subsubsection}{\numberline {3.2.2}特徵點提取及臉部偵測技術}{14}% 
+\contentsline {section}{\numberline {4}實驗結果}{16}% 
+\contentsline {subsection}{\numberline {4.1}實驗環境}{16}% 
+\contentsline {subsection}{\numberline {4.2}網路傳送延遲時間之計算評估}{16}% 
+\contentsline {subsection}{\numberline {4.3}影像處理精確度及延遲之評估}{16}% 
+\contentsline {subsection}{\numberline {4.4}肌肉感測器延遲評估}{17}% 
+\contentsline {subsection}{\numberline {4.5}招式辨識率準確度評估}{17}% 
+\contentsline {subsection}{\numberline {4.6}專題結果展示}{17}% 
+\contentsline {subsection}{\numberline {4.7}遊戲者體驗}{17}% 
+\contentsline {section}{\numberline {5}結論}{18}% 
+\contentsline {section}{\numberline {6}工作分配}{19}% 
+\contentsline {section}{Reference}{20}% 

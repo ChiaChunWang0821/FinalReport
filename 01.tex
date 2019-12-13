@@ -43,7 +43,7 @@
 
 \pagenumbering{roman}  % Use roman numbers before the main body.
 \begin{abstract}  % Abstract
-本專題設計為一款雙人網路連線對戰的擴增實境遊戲，結合影像處理及肌肉感測器技術，以之為主架構來設計整個遊戲的開發。在這款遊戲中，利用肌肉感測器測量肌肉活動狀況，及不斷改變肌肉施力大小與頻率，來達成開發者要求。建立網路通道，即時傳輸感測器數據與雙方畫面，以現實中對方遊戲者臉部影像為基礎，改變其皮膚色調，且在指定位置拼貼上逗趣的圖示。期許玩家在煩悶的生活中，透過此遊戲藉由肌肉感測器活動筋骨之餘，看見對方即時畫面如視訊功能般，在遊玩過程中增進彼此間的溫度、紓解身心靈的疲憊感。
+本專題設計為一款雙人網路連線對戰的擴增實境遊戲，於 Android 行動裝置上開發，結合影像處理及肌肉感測器技術，以之為主架構來設計整個遊戲的開發。在這款遊戲中，利用肌肉感測器測量肌肉活動狀況，及不斷改變肌肉施力大小與頻率，來達成開發者要求。建立網路通道，即時傳輸感測器數據與雙方畫面，以現實中對方遊戲者臉部影像為基礎，改變其皮膚色調，且在指定位置拼貼上逗趣的圖示。期許玩家在煩悶的生活中，透過此遊戲藉由肌肉感測器活動筋骨之餘，看見對方即時畫面如視訊功能般，在遊玩過程中增進彼此間的溫度、紓解身心靈的疲憊感。
 
 %本專題使用Android手持行動裝置與Arduino肌肉感測器，開發出一個透過網路連線得以即時對戰之擴增實境遊戲。\\
 %\indent 本遊戲基於TCP架構使得遊戲者連線伺服器後，將影像資料或肌肉感測器數據透過此通道進行網路傳送，得以使遊戲者能享受即時且更真實的遊戲體驗。臉部畫面的部分，利用電腦視覺技術，將影像變醜後，再將之傳送給對方。而判斷改變臉部畫面醜陋程度，則是透過操作肌肉感測器後，讀取其數值，若超過某頻率或大小，則算成功攻擊對方，即可將對方臉部畫面改醜。最後，將Android系統及Arduino系統透過藍芽來連線，得以完整操作此遊戲。
@@ -319,7 +319,70 @@
 \newpage
 
 \subsection{影像處理}
-影像處理影像處理影像處理\\
+\subsubsection{使用工具}
+\begin{itemize}
+\item 使用Google Firebase ML Kit。ML Kit為Google 在2018年新開發出專為行動裝置所設計的SDK。主要將Google Cloud Vision API、Mobile Vision、Tensorflow Lite三部分組合而成。本次專題中主要使用到ML Kit 提供的影像相關之Vision API 的Face Detection部分。
+\item Face Detection API之特點
+\begin{description}
+\item[1] 能快速辨識並且標記出臉部的特徵點：能辨識出各臉部中五官之位置及人臉或五官之輪廓。
+\item[2] 辨識臉部表情：能辨識臉部是否在微笑、是否閉上眼睛。
+\item[3] 人臉追蹤：辨識影片曾出現過的人臉，並給予ID以便讀取關於某面孔之資料。
+\item[4] 即時處理：即使在沒有網路服務下仍能快速處理辨識。在動態畫面的處理上效能更佳。
+\end{description}
+\end{itemize}
+
+\subsubsection{特徵點提取及臉部偵測技術}
+\begin{itemize}
+\item 臉部偵測概述
+\begin{description}
+\item[1] Face Orientation
+\begin{itemize}
+\item 臉部偵測的第一步為偵測臉部之位置，並找出其轉向的角度。(圖 \ref{Pose angle estimation} 所示)
+\begin{figure}[htbp]
+\subfigure[The coordinate system]{
+\includegraphics[width=5cm]{pic/ch3/coord.png}
+}
+\quad
+\subfigure[Pose angle examples]{
+\includegraphics[width=5cm]{pic/ch3/poseangles.png}
+}
+\caption{Pose angle estimation} \label{Pose angle estimation}
+\end{figure}
+\item API中所檢測到的為Euler Y 以及 Euler Z。預設回傳Euler Z，如果需取得Euler Y則需將檢測器之設定做修改。
+\end{itemize}
+
+\item[2] Landmarks
+\begin{itemize}
+\item 此為面部中的特徵點，例如左右眼、鼻頭皆為此。
+\item 在此API中，偵測時並沒有先以特徵點來做為面部偵測的基礎，而是先將臉部整體偵測出來後從中提取出所需要的Landmarks。
+\item 其中因不同的Euler Z所能偵測的也會有所不同。詳細如下圖 \ref{Landmark與EulerZ之關係圖} 所示。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=10cm]{pic/ch3/Landmarks.JPG}
+\caption{Landmark與Euler Z之關係圖} \label{Landmark與EulerZ之關係圖}
+\end{figure}
+\end{itemize}
+
+\item[3] Contours \\
+將代表面部特徵之點組合而形成的輪廓，而所偵測到的特徵輪廓都由特定數量的點來表示，而當面部中總共133個Contours 皆取得時，每個特徵輪廓皆會有特定的編號。(圖 \ref{特徵點相關資訊} 及圖 \ref{所偵測之結果} 所示 )
+\begin{figure}[htbp]
+\subfigure[特徵輪廓數量]{
+\includegraphics[width=5cm]{pic/ch3/numberOfPoints.JPG}
+}
+\quad
+\subfigure[Landmark的編號]{
+\includegraphics[width=5cm]{pic/ch3/feature_contours.JPG}
+}
+\caption{特徵點相關資訊} \label{特徵點相關資訊}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=5cm]{pic/ch3/face_contours.JPG}
+\caption{所偵測之結果} \label{所偵測之結果}
+\end{figure}
+
+\end{description}
+\end{itemize}
 \newpage
 
 \section{實驗結果}
@@ -400,13 +463,14 @@
 \bibitem{1}首頁介面效果\\
 https://dotblogs.com.tw/starhao/2016/10/08/012050
 \bibitem{2}快速傅立葉轉換\\
+https://www.youtube.com/watch?v=k48iUhNkqh4 \\
 https://reurl.cc/M7047K
 \bibitem{3}藍芽連線\\
 https://home.gamer.com.tw/creationDetail.php?sn=3671289
 \bibitem{4}Session\\
 https://blog.csdn.net/ZDW86/article/details/35795125
 \bibitem{5}TCP連線\\
-https://reurl.cc/YlvV1X
+https://github.com/marselsampe/java-socket-tcp-sample
 \end{thebibliography}
 \newpage
 
