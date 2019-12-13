@@ -380,29 +380,35 @@
 \item 其中因不同的Euler Z所能偵測的也會有所不同。詳細如下圖 \ref{Landmark與EulerZ之關係圖} 所示。
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=10cm]{pic/ch3/Landmarks.JPG}
+\includegraphics[width=15cm]{pic/ch3/Landmarks.JPG}
 \caption{Landmark與Euler Z之關係圖} \label{Landmark與EulerZ之關係圖}
 \end{figure}
 \end{itemize}
 
 \item[3] Contours \\
-將代表面部特徵之點組合而形成的輪廓，而所偵測到的特徵輪廓都由特定數量的點來表示，而當面部中總共133個Contours 皆取得時，每個特徵輪廓皆會有特定的編號。(圖 \ref{特徵點相關資訊} 及圖 \ref{所偵測之結果} 所示 )
+將代表面部特徵之點組合而形成的輪廓，而所偵測到的特徵輪廓都由特定數量的點來表示，而當面部中總共133個Contours 皆取得時，每個特徵輪廓皆會有特定的編號。(圖 \ref{特徵點相關資訊} 所示 )
 \begin{figure}[htbp]
 \subfigure[特徵輪廓數量]{
-\includegraphics[width=5cm]{pic/ch3/numberOfPoints.JPG}
+\includegraphics[width=9cm]{pic/ch3/numberOfPoints.JPG}
 }
 \quad
 \subfigure[Landmark的編號]{
-\includegraphics[width=5cm]{pic/ch3/feature_contours.JPG}
+\includegraphics[width=10cm]{pic/ch3/feature_contours.JPG}
+}
+\subfigure[所偵測之結果]{
+\includegraphics[width=4cm]{pic/ch3/face_contours.JPG}
 }
 \caption{特徵點相關資訊} \label{特徵點相關資訊}
 \end{figure}
+\end{description}
+
+\item 特徵點之校對 \\
+在實際運行中發現該實驗之方法為將臉部區域偵測出來後，將其集中訓練的平均人臉及Landmarks匹配至區塊上。再以該影像中的pixel進行特徵點的校準，反覆循環直至特徵點誤差趨於平衡。(圖 \ref{landmarks_train})
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=5cm]{pic/ch3/face_contours.JPG}
-\caption{所偵測之結果} \label{所偵測之結果}
+\includegraphics[width=13cm]{pic/ch3/landmarks_train.jpg}
+\caption{Landmarks之校對及訓練} \label{landmarks_train}
 \end{figure}
-\end{description}
 \end{itemize}
 \newpage
 
@@ -422,7 +428,7 @@
 \item 以圖 \ref{DetectorOptions} 解釋，在此檢測器中因為即時影像傳送，故以速度作為優先選擇。
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=10cm]{pic/ch3/DetectorOptions.JPG}
+\includegraphics[width=13cm]{pic/ch3/DetectorOptions.JPG}
 \caption{程式碼截圖} \label{DetectorOptions}
 \end{figure}
 \end{itemize}
@@ -433,7 +439,7 @@
 \item 能將不同的資料型態轉變為可用於偵測器的物件，但不同的資料性態在轉換時會擁有不同的需求，例如ByteBuffery在轉換時需要先將物件轉換成FirebaseVisionImageMetadata物件來進行描述。(圖 \ref{VisionImage})
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=10cm]{pic/ch3/VisionImage.JPG}
+\includegraphics[width=15cm]{pic/ch3/VisionImage.JPG}
 \caption{程式碼截圖} \label{VisionImage}
 \end{figure}
 \end{itemize}
@@ -441,14 +447,14 @@
 \item[3] 執行檢測器FirebaseVisionFaceDetector(圖 \ref{detector})
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=10cm]{pic/ch3/detector.JPG}
+\includegraphics[width=13cm]{pic/ch3/detector.JPG}
 \caption{程式碼截圖} \label{detector}
 \end{figure}
 
 \item[4] 取得偵測完之物件FirebaseVisionFace(圖 \ref{FaceResult})
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=10cm]{pic/ch3/FaceResult.JPG}
+\includegraphics[width=13cm]{pic/ch3/FaceResult.JPG}
 \caption{程式碼截圖} \label{FaceResult}
 \end{figure}
 在FirebaseVisionFace便存取了在臉部改動所需要的臉部輪廓座標以及面部特徵輪廓座標資料。
@@ -456,6 +462,23 @@
 \end{itemize}
 
 \subsubsection{面部更改}
+\begin{itemize}
+\item 取得特徵資料之座標 \\
+運用 FirebaseVisionFaceLandmark 物件紀錄所取得的臉部不同五官資料以取得右眼中心資料為例，並取得x,y座標。(圖 \ref{Landmark})
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=15cm]{pic/ch3/Landmark.jpg}
+\caption{程式碼截圖} \label{Landmark}
+\end{figure}
+
+\item 圖片合成 \\
+將欲合成之圖片轉換成bitmap檔案後創立與原圖大小相同之新Bitmap及其Canvas。在其中進行圖片合成。(圖 \ref{imgcon})
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=13cm]{pic/ch3/imgcon.jpg}
+\caption{程式碼截圖} \label{imgcon}
+\end{figure}
+\end{itemize}
 \newpage
 
 
@@ -482,16 +505,20 @@
 
 \subsection{專題結果展示}
 \begin{itemize}
-\item 遊戲主頁面及開始畫面(連線上Server) \\ \\
-\includegraphics[scale=0.15]{pic/ch4/game01.png} 
+\item 遊戲主頁面及開始、結束畫面 \\ \\
+\includegraphics[scale=0.2]{pic/ch4/game01.png} 
 \space \space
-\includegraphics[scale=0.15]{pic/ch4/game02.png}
+\includegraphics[scale=0.2]{pic/ch4/game02.png}
+\space \space
+\includegraphics[scale=0.2]{pic/ch4/game05.png}
+
 \item 遊戲中畫面 \\ \\
-\includegraphics[scale=0.15]{pic/ch4/game03.png}
+\includegraphics[scale=0.2]{pic/ch4/game03.png}
 \space \space
-\includegraphics[scale=0.15]{pic/ch4/game04.png}
-\item 遊戲結束畫面 \\ \\
-\includegraphics[scale=0.15]{pic/ch4/game05.png}
+\includegraphics[scale=0.2]{pic/ch4/game04.png}
+\space \space
+\includegraphics[scale=0.265]{pic/ch4/game06.png}
+
 \end{itemize}
 
 \subsection{遊戲者體驗}

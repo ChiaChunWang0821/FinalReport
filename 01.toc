@@ -18,15 +18,15 @@
 \contentsline {subsection}{\numberline {3.2}影像處理}{15}% 
 \contentsline {subsubsection}{\numberline {3.2.1}使用工具}{15}% 
 \contentsline {subsubsection}{\numberline {3.2.2}特徵點提取及臉部偵測技術}{15}% 
-\contentsline {subsubsection}{\numberline {3.2.3}ML Kit 運行步驟}{17}% 
-\contentsline {subsubsection}{\numberline {3.2.4}面部更改}{18}% 
-\contentsline {section}{\numberline {4}實驗結果}{19}% 
-\contentsline {subsection}{\numberline {4.1}實驗環境}{19}% 
-\contentsline {subsection}{\numberline {4.2}網路傳送延遲時間之計算評估}{19}% 
-\contentsline {subsection}{\numberline {4.3}影像處理精確度及延遲之評估}{19}% 
-\contentsline {subsection}{\numberline {4.4}肌肉感測器延遲評估}{19}% 
-\contentsline {subsection}{\numberline {4.5}專題結果展示}{19}% 
-\contentsline {subsection}{\numberline {4.6}遊戲者體驗}{20}% 
-\contentsline {section}{\numberline {5}結論}{21}% 
-\contentsline {section}{\numberline {6}工作分配}{22}% 
-\contentsline {section}{Reference}{23}% 
+\contentsline {subsubsection}{\numberline {3.2.3}ML Kit 運行步驟}{18}% 
+\contentsline {subsubsection}{\numberline {3.2.4}面部更改}{20}% 
+\contentsline {section}{\numberline {4}實驗結果}{21}% 
+\contentsline {subsection}{\numberline {4.1}實驗環境}{21}% 
+\contentsline {subsection}{\numberline {4.2}網路傳送延遲時間之計算評估}{21}% 
+\contentsline {subsection}{\numberline {4.3}影像處理精確度及延遲之評估}{21}% 
+\contentsline {subsection}{\numberline {4.4}肌肉感測器延遲評估}{21}% 
+\contentsline {subsection}{\numberline {4.5}專題結果展示}{21}% 
+\contentsline {subsection}{\numberline {4.6}遊戲者體驗}{22}% 
+\contentsline {section}{\numberline {5}結論}{23}% 
+\contentsline {section}{\numberline {6}工作分配}{24}% 
+\contentsline {section}{Reference}{25}% 
